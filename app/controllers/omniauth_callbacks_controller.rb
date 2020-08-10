@@ -1,4 +1,6 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  before_action :authenticake_user!
+
   def line; basic_action end
 
   private
